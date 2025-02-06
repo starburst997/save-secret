@@ -13,7 +13,7 @@ async function run() {
     let secretValue = core.getInput('secret_value', {required: true});
 
     // Read the file content in secret value
-    secretValue = await fs.readFile(secretValue);
+    secretValue = await fs.readFile(secretValue, 'utf8');
 
     // TODO: dirty but currently it's not possible to fetch repository name from event when using scheduled action.
     const [owner, repository] = ownerWithRepo.split("/");
