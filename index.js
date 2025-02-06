@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const sodium = require('tweetsodium');
+const fs = require('fs-extra');
 
 // Base on actions/javascript-action template.
 async function run() {
@@ -9,7 +10,10 @@ async function run() {
     const githubToken = core.getInput('github_token', {required: true});
     const ownerWithRepo = core.getInput('repository', {required: true});
     const secretName = core.getInput('secret_name', {required: true});
-    const secretValue = core.getInput('secret_value', {required: true});
+    let secretValue = core.getInput('secret_value', {required: true});
+
+    // Read the file content in secret value
+    secretValue = await fs.readFile(secretValue);
 
     // TODO: dirty but currently it's not possible to fetch repository name from event when using scheduled action.
     const [owner, repository] = ownerWithRepo.split("/");

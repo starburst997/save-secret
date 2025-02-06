@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Skandalik/save-secret.git"
+    "url": "git+https://github.com/starburst997/save-secret.git"
   },
   "keywords": [
     "GitHub",
@@ -20,13 +20,14 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Skandalik/save-secret/issues"
+    "url": "https://github.com/starburst997/save-secret/issues"
   },
-  "homepage": "https://github.com/Skandalik/save-secret#readme",
+  "homepage": "https://github.com/starburst997/save-secret#readme",
   "dependencies": {
     "@actions/core": "^1.2.5",
     "@actions/github": "^4.0.0",
-    "tweetsodium": "^0.0.5"
+    "tweetsodium": "^0.0.5",
+    "fs-extra": "~11.2.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.27.0",
