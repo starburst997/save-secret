@@ -75,10 +75,6 @@ async function handleSecret(octokit, secretName, encrypted, owner, repository, k
     key_id: keyId
   })
   core.info(`< ${status} ${Date.now() - time}ms`);
-
-  core.setOutput("status", status);
-  core.setOutput("headers", JSON.stringify(headers, null, 2));
-  core.setOutput("data", JSON.stringify(data, null, 2));
 }
 
 run();
