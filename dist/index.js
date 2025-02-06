@@ -21,7 +21,7 @@ async function run() {
 
     // Read the file content in secret value
     core.info(`> secret path: ${secretValue}`);
-    secretValue = await fs.readFile(secretValue, 'utf8');
+    secretValue = await fs.readFile(secretValue, 'ascii');
     core.info(`> secret value: ${secretValue}`);
 
     // TODO: dirty but currently it's not possible to fetch repository name from event when using scheduled action.
