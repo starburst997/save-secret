@@ -1,6 +1,5 @@
 # save-secret
 
----
 GitHub Action that takes secret value and saves it in the repository secrets.
 
 ## Usage
